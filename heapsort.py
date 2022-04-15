@@ -46,19 +46,13 @@
 #         else:
 #             break
 #
-data = [5,6,11,13,2,3,14,1,9,15,6,10,8,7,12]
+# data = [5,6,11,13,2,3,14,1,9,15,6,10,8,7,12]
 # print(HeapSort(data))
 
 # сортировка Timsort  уже встроена в Python
 
 
-print(sorted(data))
 
-m = max(data)
-M = int(m)
-
-v = min(data)
-V = int(v)
 
 
 # int_list = []
@@ -67,8 +61,7 @@ V = int(v)
 # aa = sorted(int_list)
 
 # print(aa)
-print(M)
-print(V)
+
 # > 1 word meow
 # > ['1', 'word', 'meow']
 # > <class 'list'>
@@ -109,16 +102,53 @@ print(V)
 # print(numba)
 # ok_num(numba)
 
-def getNumber02 ():
-    while True:
-        getNumber = input('Введите целое положительное число: ')  # Ввод числа
-        if getNumber.isdigit() : return getNumber
-        else:
-            break
+s = "5 6 11 13 2 3 14 1 9 15 6 10 8 7 12"
+data = (sorted(list(map(int, s.split()))))
+print(data)
 
-# print(getNumber02())
-a = getNumber02()
+# data2 = sorted(data)
+#
+# print(data2)
+print(sorted(data, reverse=True))
+
+M = max(data)
+V = min(data)
+print(M)
+print(V)
+
+def get_02 ():
+    while True:
+        get_01 = input('Введите целое положительное число: ')  # Ввод числа
+        if get_01.isdigit(): return get_01
+
+# print(get_02())
+a = get_02()
 A = int(a)
+
+
+def binary_search():
+    low = 0
+    high = len(data) - 1
+    mid = 0
+
+    while low is A:
+        high = mid - 1
+
+        # If n is smaller, compared to the left of mid
+    else:
+        return mid
+
+        # element was not present in the list, return -1
+    return -1
+
+
+result = binary_search(data, A)
+
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in list1")
+
 if V > A:
     print(" Введено число меньше минимального списка")
 elif V == A:
@@ -129,7 +159,5 @@ elif M < A:
 elif M == A:
     print("введено число равное максимальному в списке")
 
-elif M > A > V:
-    print(" Ввел хорошее  число")
 
 
