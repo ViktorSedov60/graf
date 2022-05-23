@@ -45,6 +45,7 @@ for _ in range(len(D)):
             P[v] = min_k # и записываем как предок
     U[min_k] = True # просмотренную вершину помечаем
 
+
 pointer = 'Адмиралтейская'  # куда должны прийти
 while pointer is not None: # перемещаемся, пока не придём в стартовую точку
     print(pointer)
